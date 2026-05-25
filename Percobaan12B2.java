@@ -1,0 +1,27 @@
+class Eksepsi {
+
+    static void tampil(String s) throws Exception {
+
+        System.out.println("Tampil");
+
+        if(s.equals("amir")) {
+
+            throw new MyException(s);
+        }
+
+        System.out.println("OK!");
+    }
+
+    public static void main(String[] args) throws Exception {
+
+        try {
+
+            tampil("ali");
+            tampil("amir");
+
+        } catch(MyException ex) {
+
+            System.out.println("Tangkap: " + ex);
+        }
+    }
+}
